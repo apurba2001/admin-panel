@@ -1,0 +1,35 @@
+.navbar-container{
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.icon-container{
+    display: flex;
+    width: 30%;
+
+}
+.nav-options{
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    align-items: center;
+}
+#search{
+    min-width: 250px;
+    height: 40px;
+    padding: 5px 15px;
+    border-radius: 25px;
+    border: 1px solid gray;
+    font-size: 15px;
+}
+.nav-btn{
+    height: 35px;
+    padding: 5px 10px;
+    color: white;
+    background-color: black;
+    border-radius: 25px;
+    cursor: pointer;
+}
