@@ -1,0 +1,30 @@
+.dashboard-container-1{
+    display: flex;
+}
+.dashboard-container-2{
+    width: calc(100% - 220px);
+    padding: 20px;
+}
+.table-data, td, th{
+    border-collapse: collapse;
+    margin: auto;
+    border: 1px solid black;
+    padding: 5px 15px;
+    text-align: center;
+}
+th{
+    background-color: rgb(236, 236, 236);
+}
+.table-data{
+    border-radius: 10px;
+    width: 100%;
+}
+.weather-container{
+    border: 1px solid;
+    width: 200px;
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(243, 243, 243);
+}

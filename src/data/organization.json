@@ -1,0 +1,10 @@
+[
+    {
+        "Id": "1",
+        "name": "ABC Engineering College",
+        "address": "Sec-2 , India House, Delhi",
+        "status": "Active",
+        "phone": "120635241",
+        "email": "admin@abcengineering.com"
+    }
+]

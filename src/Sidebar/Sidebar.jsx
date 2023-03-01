@@ -3,9 +3,10 @@ import { NavLink } from 'react-router-dom'
 
 import './Sidebar.css'
 
-const Sidebar = () => {
+const Sidebar = ({ display }) => {
+
   return (
-    <div className='sidebar'>
+    <div className={`sidebar-container ${display ? "open" : "close" }`}>
       <nav className='side-nav'>
         <NavLink
           to="/"

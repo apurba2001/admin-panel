@@ -1,0 +1,32 @@
+[
+    {
+        "Id": "1",
+        "organization": "ABC Engineering College",
+        "group": "Delhi",
+        "department": "Admin",
+        "role": "Staff",
+        "name": "Dinesh Bhargava",
+        "gender": "Male",
+        "profilePic": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg",
+        "status": "Active",
+        "idCardNo": "ADM123450",
+        "address": "G-22, Manesar Road, Haryana",
+        "phone": "8590025360",
+        "email": "dinesh@abcengineering.com"
+    },
+    {
+        "Id": "1",
+        "organization": "ABC Engineering College",
+        "group": "Delhi",
+        "department": "Admin",
+        "role": "Staff",
+        "name": "Dinesh Bhargava",
+        "gender": "Male",
+        "profilePic": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg",
+        "status": "Active",
+        "idCardNo": "ADM123450",
+        "address": "G-22, Manesar Road, Haryana",
+        "phone": "8590025360",
+        "email": "dinesh@abcengineering.com"
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "Id": "1",
+        "organization": "ABC Engineering College",
+        "group": "Delhi",
+        "department": "Science",
+        "role": "student",
+        "name": "Amit Kumar",
+        "gender": "Male",
+        "BatchId": "A01",
+        "profilePic": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg",
+        "status": "Active",
+        "idCardNo": "SCI012345",
+        "address": "K-12, AIIMS Road, New Delhi",
+        "phone": "8596748596",
+        "email": "amit@abcengineering.com"
+    }
+]

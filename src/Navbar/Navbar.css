@@ -19,17 +19,16 @@
 }
 #search{
     min-width: 250px;
-    height: 40px;
+    height: 35px;
     padding: 5px 15px;
-    border-radius: 25px;
     border: 1px solid gray;
     font-size: 15px;
+    background-color: rgb(245, 245, 245);
 }
 .nav-btn{
     height: 35px;
     padding: 5px 10px;
     color: white;
     background-color: black;
-    border-radius: 25px;
     cursor: pointer;
 }
