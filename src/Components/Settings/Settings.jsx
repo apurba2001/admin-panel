@@ -8,7 +8,7 @@ const Settings = () => {
     const display = useContext(SideContext)
 
     const cpuCount = navigator.hardwareConcurrency;
-    const [availableMemory, setAvailableMemory] = useState(0);
+    const [availableMemory, setAvailableMemory] = useState(0)
 
     useEffect(() => {
         const updateAvailableMemory = () => {
@@ -19,16 +19,16 @@ const Settings = () => {
         return () => clearInterval(memoryInterval)
     }, [])
 
-    const [timeZone, setTimeZone] = useState(Intl.DateTimeFormat().resolvedOptions().timeZone);
-    const [currentTime, setCurrentTime] = useState(new Date());
+    const [timeZone, setTimeZone] = useState(Intl.DateTimeFormat().resolvedOptions().timeZone)
+    const [currentTime, setCurrentTime] = useState(new Date())
 
     function handleTimeZoneChange(event) {
-        setTimeZone(event.target.value);
+        setTimeZone(event.target.value)
     }
     function updateTime() {
-        setCurrentTime(new Date());
+        setCurrentTime(new Date())
     }
-    setInterval(updateTime, 1000);
+    setInterval(updateTime, 1000)
 
     return (
         <div className='setting-main-1'>

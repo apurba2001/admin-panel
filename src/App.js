@@ -5,18 +5,21 @@ import './App.css';
 import Navbar from './Navbar/Navbar';
 import Router from './Routes';
 import { SideContext } from './Components/Contexts/Context';
-
+import { ThemeContext } from './Components/Contexts/Theme';
 
 function App() {
   const [sidebar, setSidebar] = useState(true)
+  const [theme, setTheme] = useState(true)
   return (
-    <div className="App">
-        <Navbar setSidebar={setSidebar} />
-      <SideContext.Provider value={sidebar}>
-        <BrowserRouter>
-          <Router />
-        </BrowserRouter>
-      </SideContext.Provider>
+    <div className="App" style={{ background : theme ? 'white' : 'gray'}}>
+      <ThemeContext.Provider value={theme}>
+      <Navbar setSidebar={setSidebar} setTheme={setTheme} />
+        <SideContext.Provider value={sidebar}>
+          <BrowserRouter>
+            <Router />
+          </BrowserRouter>
+        </SideContext.Provider>
+      </ThemeContext.Provider>
     </div>
   );
 }
