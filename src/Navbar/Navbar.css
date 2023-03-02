@@ -8,22 +8,24 @@
 }
 .icon-container{
     display: flex;
-    width: 30%;
+    /* width: 30%; */
 
 }
 .nav-options{
     display: flex;
-    width: 70%;
+    /* width: 70%; */
     justify-content: space-between;
     align-items: center;
 }
 #search{
-    min-width: 250px;
+    min-width: 320px;
     height: 35px;
     padding: 5px 15px;
     border: 1px solid gray;
     font-size: 15px;
     background-color: rgb(245, 245, 245);
+    border-radius: 5px;
+    margin: 0 5px;
 }
 .nav-btn{
     height: 35px;
@@ -31,4 +33,14 @@
     color: white;
     background-color: black;
     cursor: pointer;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+.time-container{
+   
+    font-size: 11px;
+    margin: 5px;
+    background-color: rgb(237, 237, 237);
+    padding:  2px 5px;
+    border-radius: 5px;
 }

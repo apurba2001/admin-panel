@@ -1,5 +1,5 @@
 .sidebar-container.open{
-    width: 220px;
+    width: 250px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transition: box-shadow ease-in-out 0.1s,
     transform ease-in-out 0.1s;

@@ -1,0 +1,36 @@
+.form-container-1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 400px;
+  min-height: 400px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+}
+.form-container-2{
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  
+}
+.input-element{
+  margin: 5px 5px 5px 0px;
+  height: 35px;
+  width: 100%;
+  padding: 5px 10px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.form-btn{
+  margin: 15px 0 0 0px;
+  height: 35px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: black;
+}
