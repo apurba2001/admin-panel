@@ -1,0 +1,27 @@
+.setting-main-1{
+    display: flex;
+}
+.device-health{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 20px;
+    width: 250px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 25px;
+}
+.timezone-setting{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 20px;
+    width: 250px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.setting-main-2{
+    display: flex;
+}
