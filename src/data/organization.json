@@ -1,7 +1,35 @@
 [
     {
         "Id": "1",
+        "students": 500,
+        "name": "DSMS College",
+        "address": "Sec-2 , India House, Delhi",
+        "status": "Active",
+        "phone": "120635241",
+        "email": "admin@abcengineering.com"
+    },
+    {
+        "Id": "2",
         "name": "ABC Engineering College",
+        "address": "Sec-2 , India House, Delhi",
+        "students": 200,
+        "status": "Active",
+        "phone": "120635241",
+        "email": "admin@abcengineering.com"
+    },
+    {
+        "Id": "3",
+        "students": 700,
+        "name": "HCT College",
+        "address": "Sec-2 , India House, Delhi",
+        "status": "Active",
+        "phone": "120635241",
+        "email": "admin@abcengineering.com"
+    },
+    {
+        "Id": "4",
+        "students": 450,
+        "name": "Panagarh College",
         "address": "Sec-2 , India House, Delhi",
         "status": "Active",
         "phone": "120635241",

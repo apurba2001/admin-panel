@@ -10,7 +10,7 @@ const Form = ({ data, type, saveData, dataType, display, createData }) => {
   }
   const handleSubmit = (e) =>{
     e.preventDefault()
-    saveData(type, data.Id, formData, dataType)
+      saveData(type, data.Id, formData, dataType)
   }
   let inputs = []
 

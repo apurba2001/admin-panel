@@ -9,6 +9,8 @@ import groupData from '../../data/group.json'
 import studentData from '../../data/student.json'
 import userData from '../../data/user.json'
 import './Dashboard.css'
+import PieChart from '../Charts/Pie'
+import AttendenceChart from '../Charts/Line'
 
 const Dashboard = () => {
   const [weather, setWeather] = useState('')
@@ -53,6 +55,10 @@ const Dashboard = () => {
           <p>Temperature: {weather.temperature}°C</p>
           <p>Windspeed: {weather.windspeed} m/s</p>
           <p>{moment(weather.time).format("MMMM Do YYYY, h:mm a")}</p>
+        </div>
+        <div style={{display: 'flex', justifyContent: "space-between", alignItems: "flex-end"}}>
+          <PieChart />
+          <AttendenceChart />
         </div>
       </div>
     </div>
