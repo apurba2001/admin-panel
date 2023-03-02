@@ -9,7 +9,7 @@ import Table from '../Table/Table'
 import orgsData from '../../data/organization.json'
 import groupsData from '../../data/group.json'
 import rolesData from '../../data/role.json'
-import usersData from '../../data/user.json'
+import departmentData from '../../data/department.json'
 
 const Organization = () => {
     const display = useContext(SideContext)
@@ -20,7 +20,7 @@ const Organization = () => {
     const [organization, setOrganization] = useState(orgsData)
     const [groups, setGroups] = useState(groupsData)
     const [roles, setRoles] = useState(rolesData)
-    const [users, setUsers] = useState(usersData)
+    const [department, setDepartment] = useState(departmentData)
 
     const editData = (id, dataType) => {
         setFormType('edit')
@@ -29,7 +29,7 @@ const Organization = () => {
             org: organization,
             group: groups,
             role: roles,
-            user: users,
+            department: department,
         }
         const editElement = dataMap[dataType].find((element) => element.Id === id)
         setEditElement(editElement)
@@ -49,9 +49,9 @@ const Organization = () => {
                 const newRoleData = roles.filter((item) => item.Id !== id)
                 setRoles(newRoleData)
                 break
-            case 'user':
-                const newUserData = users.filter((item) => item.Id !== id)
-                setUsers(newUserData);
+            case 'department':
+                const newDepartmentData = department.filter((item) => item.Id !== id)
+                setDepartment(newDepartmentData);
                 break
             default:
                 break
@@ -66,14 +66,14 @@ const Organization = () => {
                 return groups.length + 1
             case 'role':
                 return roles.length + 1
-            case 'user':
-                return users.length + 1
+            case 'department':
+                return department.length + 1
             default:
                 return 1
         }
     }
 
-    const saveData = (type, dataType, id, data) => {
+    const saveData = (type, id, data, dataType) => {
         if (type === 'edit') {
             switch (dataType) {
                 case 'org':
@@ -94,11 +94,11 @@ const Organization = () => {
                     });
                     setRoles(newRoleData)
                     break
-                case 'user':
-                    const newUserData = users.map((item) => {
+                case 'department':
+                    const newDepartmentData = department.map((item) => {
                         return item.Id === id ? data : item
                     });
-                    setUsers(newUserData)
+                    setDepartment(newDepartmentData)
                     break
                 default:
                     break
@@ -115,8 +115,8 @@ const Organization = () => {
                 case 'role':
                     setRoles([...roles, newData])
                     break;
-                case 'user':
-                    setUsers([...users, newData])
+                case 'department':
+                    setDepartment([...department, newData])
                     break
                 default:
                     break
@@ -151,7 +151,7 @@ const Organization = () => {
                     "role": "",
                     "status": ""
                 })
-            case 'user':
+            case 'department':
                 setEditElement({
                     "Id": "",
                     "organization": "",
@@ -193,10 +193,10 @@ const Organization = () => {
                 <Form createData={createData} display={formDisplay} dataType='role' data={editElement} type={formType} saveData={saveData} />
                 <div className='org-container-2'>
                     <h2 style={{ margin: "0 0 10px 0" }}>Users</h2>
-                    <Table dataType='user' data={users} editFunc={editData} deleteFunc={deleteData} />
-                    <button className='create-data-btn' onClick={() => createData('user')} >Create</button>
+                    <Table dataType='department' data={department} editFunc={editData} deleteFunc={deleteData} />
+                    <button className='create-data-btn' onClick={() => createData('department')} >Create</button>
                 </div>
-                <Form createData={createData} display={formDisplay} dataType='user' data={editElement} type={formType} saveData={saveData} />
+                <Form createData={createData} display={formDisplay} dataType='department' data={editElement} type={formType} saveData={saveData} />
             </div>
         </div>
     )
