@@ -1,8 +1,8 @@
 [
     {
         "Id": "1",
-        "students": 500,
         "name": "DSMS College",
+        "students": 500,
         "address": "Sec-2 , India House, Delhi",
         "status": "Active",
         "phone": "120635241",

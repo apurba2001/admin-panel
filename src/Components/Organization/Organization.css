@@ -1,7 +1,10 @@
 .org-main{
     display: flex;
 }
-
+.org-main.dark{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
 .org-container-1{
     display: flex;
     width: 100%;
@@ -21,7 +24,10 @@
     color: white;
     border-radius: 5px;
 }
-
+.org-main.dark .table-button{
+    background-color: white;
+    color: black;
+}
 .create-data-btn{
     padding: 10px 15px;
     margin: 10px 0;
@@ -29,4 +35,8 @@
     border: none;
     background-color: black;
     color: white;
+}
+.org-main.dark .create-data-btn{
+    background-color: white;
+    color: black;
 }

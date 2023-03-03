@@ -6,13 +6,13 @@ import menu_logo from '../icons/menu.png'
 import logo from '../icons/logo.png'
 import user from '../icons/user.png'
 import './Navbar.css'
-import { ThemeContext } from '../Components/Contexts/Theme';
+import { ThemeContext } from '../Components/Contexts/Context';
 
 const Navbar = ({ setSidebar, setTheme }) => {
     const currentDateTime = moment().format('MMMM Do YYYY, hh:mm:ss A')
     const theme = useContext(ThemeContext)
     return (
-        <div className={`navbar-container ${theme}`}>
+        <div className={`navbar-container ${theme ? '' : 'light'}`}>
             <div className="icon-container">
                 <div className="logo-icon" style={{margin: '5px'}}>
                     <img src={logo} alt="logo-icon" width='35' style={{ cursor: 'pointer' }} />

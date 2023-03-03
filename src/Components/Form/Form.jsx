@@ -1,44 +1,49 @@
-import { useState } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import './Form.css'
 
-const Form = ({ data, type, saveData, dataType, display, createData }) => {
-  const [formData, setFormData] = useState({ Id: data.Id })
+import { ThemeContext } from '../Contexts/Context'
+
+const Form = ({ data, saveData, display, formType, setDisplay }) => {
+  const [formData, setFormData] = useState({})
+  const theme = useContext(ThemeContext)
+
+  useEffect(() => {
+    setFormData(data)
+  }, [data])
 
   const handleForm = (e) => {
     const { name, value } = e.target
-    setFormData(prevState => ({ ...prevState, [name]: value }))
-  }
-  const handleSubmit = (e) =>{
+    setFormData((prevState) => ({ ...prevState, [name]: value }))
+  };
+
+  const handleSubmit = (e) => {
     e.preventDefault()
-      saveData(type, data.Id, formData, dataType)
+    saveData(formData, formType, formData.Id)
+    setDisplay(false)
   }
-  let inputs = []
 
-  for (let element in data) {
-    if (element === 'Id') continue
-    const key = `input-${element}`
-
-    inputs.push(
-      <label key={key}>
-        <h5>{element.charAt(0).toUpperCase() + element.slice(1)}</h5>
+  const inputs = Object.entries(formData).map(([key, value]) => {
+    if (key === 'Id') return null
+    const inputKey = `input-${key}`
+    return (
+      <label key={inputKey}>
+        <h5>{key.charAt(0).toUpperCase() + key.slice(1)}</h5>
         <input
-          name={element}
+          name={key}
           className='input-element'
           type='text'
-          value={formData[element] ? formData[element] : ''}
+          value={value ? value : ''}
           onChange={handleForm}
         />
       </label>
     )
-  }
+  })
 
   return (
-    <div className='form-container-1' style={{display: display ? "block" : "none"}} >
-      <form className='form-container-2' onSubmit={handleSubmit}>
+    <div className={`form-container-1  ${theme ? '' : 'dark'}`} style={{ display: display ? 'block' : 'none' }}>
+      <form className={`form-container-2  ${theme ? '' : 'dark'}`} onSubmit={handleSubmit}>
         {inputs}
-        <button className='form-btn' >
-          {type === 'edit' ? 'Save' : 'Create'}
-        </button>
+        <button className='form-btn'>{formType === 'edit' ? 'Save' : 'Create'}</button>
       </form>
     </div>
   )
