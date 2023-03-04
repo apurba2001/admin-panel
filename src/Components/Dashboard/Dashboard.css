@@ -5,6 +5,10 @@
     width: 100%;
     padding: 20px;
 }
+.dashboard-container-2.dark{
+    background-color:  rgb(163, 163, 163);
+}
+
 .table-data, td, th{
     border-collapse: collapse;
     margin: auto;
@@ -15,6 +19,7 @@
 th{
     background-color: rgb(236, 236, 236);
 }
+
 .table-data{
     border-radius: 10px;
     width: 100%;

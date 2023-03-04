@@ -4,7 +4,7 @@ import axios from 'axios'
 import moment from 'moment'
 
 import Sidebar from '../../Sidebar/Sidebar'
-import { SideContext } from '../Contexts/Context'
+import { SideContext, ThemeContext } from '../Contexts/Context'
 import groupData from '../../data/group.json'
 import studentData from '../../data/student.json'
 import userData from '../../data/user.json'
@@ -15,6 +15,7 @@ import AttendenceChart from '../Charts/Line'
 const Dashboard = () => {
   const [weather, setWeather] = useState('')
   const sidebar = useContext(SideContext)
+  const theme = useContext(ThemeContext)
 
   const getWeather = async () => {
     const weatherData = await axios.get('https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current_weather=true&hourly=temperature_2m,relativehumidity_2m,windspeed_10m')
@@ -29,7 +30,7 @@ const Dashboard = () => {
   return (
     <div className='dashboard-container-1'>
       <Sidebar display={sidebar} />
-      <div className='dashboard-container-2'>
+      <div className={`dashboard-container-2 ${theme ? '' : 'dark'}`}>
         <table className='table-data'>
           <thead>
             <tr>

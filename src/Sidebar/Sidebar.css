@@ -40,3 +40,15 @@
     background-color: rgb(225, 225, 225);
     border-right: solid 3px;
 }
+
+.sidebar-container.open.dark {
+    background-color: #3a3a3a;
+}
+.sidebar-container.open.dark .side-nav-link{
+    color: rgb(163, 163, 163);
+}
+
+.sidebar-container.open.dark .active{
+    background-color:   rgb(152, 152, 152);
+    color: rgb(224, 224, 224);
+}

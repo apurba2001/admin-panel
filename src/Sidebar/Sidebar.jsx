@@ -1,12 +1,12 @@
-import React from 'react'
+import { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 
 import './Sidebar.css'
-
+import { ThemeContext } from '../Components/Contexts/Context'
 const Sidebar = ({ display }) => {
-
+  const theme = useContext(ThemeContext)
   return (
-    <div className={`sidebar-container ${display ? "open" : "close" }`}>
+    <div className={`sidebar-container ${display ? "open" : "close" } ${theme ? '' : 'dark'}`}>
       <nav className='side-nav'>
         <NavLink
           to="/"

@@ -6,8 +6,8 @@
     padding: 5px 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.navbar-container.active{
-    background-color: black;
+.navbar-container.dark{
+    background-color: rgb(135, 135, 135);
     color: white;
 }
 .icon-container{
@@ -28,6 +28,10 @@
     border-radius: 5px;
     margin: 0 5px;
 }
+.navbar-container.dark #search{
+    background-color: rgb(75, 74, 74);
+    border: 1px solid gray;
+}
 .nav-btn{
     height: 35px;
     padding: 5px 10px;
@@ -36,9 +40,34 @@
     cursor: pointer;
     border-radius: 5px;
     margin: 0 5px;
+    
 }
+
+.navbar-container.dark .nav-btn.theme{
+    background-color: rgb(255, 255, 255);
+    border: none;
+    color: black;
+}
+.navbar-container #language{
+    background: rgb(243, 243, 243);
+    color: black;
+}
+.navbar-container.dark .nav-btn{
+    background-color: rgb(75, 74, 74);
+    color: rgb(152, 152, 152);
+}
+
+.navbar-container.dark .nav-options #language{
+    background-color: rgb(75, 74, 74);
+     color: rgb(152, 152, 152);
+}
+
+.navbar-container.dark .time-container{
+     background-color: rgb(75, 74, 74);
+     color: rgb(152, 152, 152);
+}
+
 .time-container{
-   
     font-size: 11px;
     margin: 5px;
     background-color: rgb(237, 237, 237);

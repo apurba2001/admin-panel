@@ -1,6 +1,6 @@
 import React from 'react'
 import moment from 'moment'
-import { useContext } from 'react';
+import { useContext, useState, useEffect } from 'react';
 
 import menu_logo from '../icons/menu.png'
 import logo from '../icons/logo.png'
@@ -9,22 +9,29 @@ import './Navbar.css'
 import { ThemeContext } from '../Components/Contexts/Context';
 
 const Navbar = ({ setSidebar, setTheme }) => {
-    const currentDateTime = moment().format('MMMM Do YYYY, hh:mm:ss A')
+    const [currentDateTime, setCurrentDateTime] = useState(moment().format('MMMM Do YYYY, hh:mm:ss A'))
+    useEffect(() => {
+        const updateTime = () => {
+            setCurrentDateTime(moment().format('MMMM Do YYYY, hh:mm:ss A'))
+        }
+        let intervel = setInterval(updateTime, 1000)
+        return () => intervel
+    }, [])
     const theme = useContext(ThemeContext)
     return (
-        <div className={`navbar-container ${theme ? '' : 'light'}`}>
+        <div className={`navbar-container ${theme ? '' : 'dark'}`}>
             <div className="icon-container">
-                <div className="logo-icon" style={{margin: '5px'}}>
+                <div className="logo-icon" style={{ margin: '5px' }}>
                     <img src={logo} alt="logo-icon" width='35' style={{ cursor: 'pointer' }} />
                 </div>
-                <div className="logo-icon" style={{margin: '5px'}} >
-                    <img src={menu_logo} alt="menu" width='35' style={{cursor: 'pointer'}} onClick={()=> setSidebar(pre => !pre)} />
+                <div className="logo-icon" style={{ margin: '5px' }} >
+                    <img src={menu_logo} alt="menu" width='35' style={{ cursor: 'pointer' }} onClick={() => setSidebar(pre => !pre)} />
                 </div>
             </div>
             <div className="nav-options">
                 <div><input type="text" placeholder='Search..' id='search' /></div>
-                <div><button className='nav-btn' style={{ background: "rgb(243, 243, 243)", color: 'black'}}>Change language</button></div>
-                <div><button className='nav-btn' onClick={() => setTheme(pre => !pre)} >{theme ? 'Dark' : 'Light'}</button></div>
+                <div><button id='language' className='nav-btn' >Change language</button></div>
+                <div><button id='theme' className='nav-btn theme' onClick={() => setTheme(pre => !pre)} >{theme ? 'Dark' : 'Light'}</button></div>
                 <div className='time-container'><div>{currentDateTime.split(',')[1]}</div><div>{currentDateTime.split(',')[0]}</div> </div>
                 <div className="user-logo">
                     <img src={user} alt='user' width='35' style={{ cursor: 'pointer' }} />
