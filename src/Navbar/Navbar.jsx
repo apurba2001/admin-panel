@@ -17,7 +17,22 @@ const Navbar = ({ setSidebar, setTheme }) => {
         let intervel = setInterval(updateTime, 1000)
         return () => intervel
     }, [])
+
     const theme = useContext(ThemeContext)
+
+    let toggleTheme = () => {
+        let body = document.body
+        if (theme) {
+            body.classList.remove('dark')
+        } else {
+            body.classList.add('dark')
+        }
+    }
+
+    useEffect(() => {
+        toggleTheme()
+    }, [theme])
+
     return (
         <div className={`navbar-container ${theme ? '' : 'dark'}`}>
             <div className="icon-container">

@@ -16,3 +16,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root{
+  --light-background:white;
+  --light-text: black;
+  --light-gray1: rgb(207, 206, 206);
+  --light-gray2:rgb(236, 236, 236);
+  --theme-button-text: white;
+  --theme-button-background: black;
+  --sidebar-background: white;
+  --sidebar-text: #3a3a3a;
+  --sidebar-text-active:black;
+  --sidebar-active-background:  rgb(225, 225, 225);
+}
+
+.dark{
+  --light-background: rgb(135, 135, 135);
+  --light-text: white;
+  --light-gray1: rgb(207, 206, 206);
+  --light-gray2: rgb(75, 74, 74);
+  --theme-button-text:rgb(0, 0, 0);
+  --theme-button-background: white;
+  --sidebar-background:  #3a3a3a;;
+  --sidebar-text:  rgb(163, 163, 163);
+  --sidebar-text-active:rgb(224, 224, 224);
+  --sidebar-active-background:  rgb(225, 225, 225);
+}

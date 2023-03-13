@@ -6,10 +6,7 @@
     padding: 5px 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.navbar-container.dark{
-    background-color: rgb(135, 135, 135);
-    color: white;
-}
+
 .icon-container{
     display: flex;
 }
@@ -24,53 +21,64 @@
     padding: 5px 15px;
     border: 1px solid gray;
     font-size: 15px;
-    background-color: rgb(245, 245, 245);
+    background-color: var(--light-gray2);
     border-radius: 5px;
     margin: 0 5px;
 }
-.navbar-container.dark #search{
-    background-color: rgb(75, 74, 74);
-    border: 1px solid gray;
-}
+
 .nav-btn{
     height: 35px;
     padding: 5px 10px;
-    color: white;
-    background-color: black;
+    color: var(--theme-button-text);
+    background-color: var(--theme-button-background);
     cursor: pointer;
     border-radius: 5px;
     margin: 0 5px;
-    
 }
 
-.navbar-container.dark .nav-btn.theme{
-    background-color: rgb(255, 255, 255);
-    border: none;
-    color: black;
-}
+
 .navbar-container #language{
-    background: rgb(243, 243, 243);
-    color: black;
-}
-.navbar-container.dark .nav-btn{
-    background-color: rgb(75, 74, 74);
-    color: rgb(152, 152, 152);
-}
-
-.navbar-container.dark .nav-options #language{
-    background-color: rgb(75, 74, 74);
-     color: rgb(152, 152, 152);
-}
-
-.navbar-container.dark .time-container{
-     background-color: rgb(75, 74, 74);
-     color: rgb(152, 152, 152);
+    background: var(--light-gray2);
+    color: var(--light-text);
 }
 
 .time-container{
     font-size: 11px;
     margin: 5px;
-    background-color: rgb(237, 237, 237);
+    background-color: var(--light-gray2);
     padding:  2px 5px;
     border-radius: 5px;
+}
+
+/* dark mode */
+
+.dark .navbar-container{
+    background-color: var(--light-background);
+    color: white;
+}
+
+.dark #search{
+    background-color: var(--light-gray2);
+    border: 1px solid gray;
+}
+
+.dark .nav-btn.theme{
+    background-color: var(--theme-button-background);
+    border: none;
+    color: var(--theme-button-text);
+}
+
+.dark .nav-btn{
+    color: var(--theme-button-text);
+    background-color: var(--theme-button-background);
+}
+
+.dark .nav-options #language{
+    background: var(--light-gray2);
+    color: var(--light-text);
+}
+
+.dark .time-container{
+    background-color: var(--light-gray2);
+    color: var(--light-gray1);
 }

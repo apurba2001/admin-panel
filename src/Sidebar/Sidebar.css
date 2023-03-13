@@ -1,24 +1,40 @@
-.sidebar-container.open{
-    width: 250px;
+.sidebar-container{
+    width: 200px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transition: box-shadow ease-in-out 0.1s,
     transform ease-in-out 0.1s;
     transform: translate(0);
     min-height: 100vh;
 }
+
+.sidebar-container.open {
+    width: 200px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: box-shadow ease-in-out 0.1s,
+    transform ease-in-out 0.1s;
+    transform: translate(0);
+    min-height: 100vh;
+    animation-duration: 0.3s;
+    animation-name: sidebar-anim-open;
+}
+
 .sidebar-container.close{
-   width: 0;
-   overflow: hidden;
+    width: 75px;
+    overflow: hidden;
+    animation-duration: 0.3s;
+    animation-name: sidebar-anim-close;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    min-height: 100vh;
 }
 .side-nav{
     height: auto;
-    max-width: 100%;
+    width: 100%;
     position: sticky;
     padding: 20px 0px;
 }
 .side-nav-div{
     padding: 10px 0px;
-
+    width: 100%;
 }
 .side-nav-div div{
     padding: 10px;
@@ -32,23 +48,57 @@
     justify-content: flex-start;
     padding: 10px;
     transition: 0.2s;
+    width: 100%;
 }
 
 .active{
     font-weight: bolder;
-    color: black;
-    background-color: rgb(225, 225, 225);
+    color: var(--sidebar-text-active);
+    background-color: var(--sidebar-active-background);
     border-right: solid 3px;
 }
 
-.sidebar-container.open.dark {
-    background-color: #3a3a3a;
-}
-.sidebar-container.open.dark .side-nav-link{
-    color: rgb(163, 163, 163);
+.side-element{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
 }
 
-.sidebar-container.open.dark .active{
-    background-color:   rgb(152, 152, 152);
-    color: rgb(224, 224, 224);
+/* dark theme */
+
+.dark .sidebar-container {
+    background-color:var(--sidebar-background);
 }
+
+.dark .sidebar-container .side-nav-link{
+    color: var(--sidebar-text)
+}
+
+.dark .sidebar-container .active{
+    background-color:rgb(152, 152, 152);
+    color: var(--sidebar-text-active);
+}
+
+/* animations */
+
+/* @keyframes sidebar-anim-open{
+    from{
+        opacity: 0 ;
+        width: 75px;
+    }to{
+        opacity: 1  ;
+        width: 200px;
+    }
+}
+
+@keyframes sidebar-anim-close{
+    from{
+        opacity: 0 ;
+        width: 200px;
+    }to{
+        opacity: 1  ;
+        width: 75px;
+    }
+} */
