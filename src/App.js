@@ -10,11 +10,12 @@ import { ThemeContext } from './Components/Contexts/Context';
 function App() {
   const [sidebar, setSidebar] = useState(true)
   const [theme, setTheme] = useState(true)
+  const [fixed, setFixed] = useState(true)
   return (
     <div className="App">
       <ThemeContext.Provider value={theme}>
-      <Navbar setSidebar={setSidebar} setTheme={setTheme} />
-        <SideContext.Provider value={sidebar}>
+      <Navbar setSidebar={setSidebar} setTheme={setTheme} setFixed={setFixed} sidebar={sidebar} />
+        <SideContext.Provider value={[sidebar, setSidebar, fixed]}>
           <BrowserRouter>
             <Router />
           </BrowserRouter>

@@ -14,7 +14,7 @@ import AttendenceChart from '../Charts/Line'
 
 const Dashboard = () => {
   const [weather, setWeather] = useState('')
-  const sidebar = useContext(SideContext)
+  const [sidebar, setSidebar, fixed] = useContext(SideContext)
   const theme = useContext(ThemeContext)
 
   const getWeather = async () => {
@@ -29,7 +29,7 @@ const Dashboard = () => {
 
   return (
     <div className='dashboard-container-1'>
-      <Sidebar display={sidebar} />
+      <Sidebar display={sidebar} setSidebar={setSidebar} fixed={fixed} />
       <div className={`dashboard-container-2 ${theme ? '' : 'dark'}`}>
         <table className='table-data'>
           <thead>

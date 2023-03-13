@@ -62,7 +62,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    column-gap: 10px;
     padding: 0px 10px;
 }
 
@@ -83,7 +83,7 @@
 
 /* animations */
 
-/* @keyframes sidebar-anim-open{
+@keyframes sidebar-anim-open{
     from{
         opacity: 0 ;
         width: 75px;
@@ -101,4 +101,4 @@
         opacity: 1  ;
         width: 75px;
     }
-} */
+}

@@ -8,7 +8,7 @@ import user from '../icons/user.png'
 import './Navbar.css'
 import { ThemeContext } from '../Components/Contexts/Context';
 
-const Navbar = ({ setSidebar, setTheme }) => {
+const Navbar = ({ setSidebar, setTheme, setFixed, sidebar }) => {
     const [currentDateTime, setCurrentDateTime] = useState(moment().format('MMMM Do YYYY, hh:mm:ss A'))
     useEffect(() => {
         const updateTime = () => {
@@ -33,6 +33,17 @@ const Navbar = ({ setSidebar, setTheme }) => {
         toggleTheme()
     }, [theme])
 
+    const handleMenu = () =>{
+        setSidebar(pre => !pre)
+        setFixed(true)
+    }
+
+    useEffect(()=>{
+        if(!sidebar){
+            setFixed(false)
+        }
+    }, [sidebar])
+
     return (
         <div className={`navbar-container ${theme ? '' : 'dark'}`}>
             <div className="icon-container">
@@ -40,7 +51,7 @@ const Navbar = ({ setSidebar, setTheme }) => {
                     <img src={logo} alt="logo-icon" width='35' style={{ cursor: 'pointer' }} />
                 </div>
                 <div className="logo-icon" style={{ margin: '5px' }} >
-                    <img src={menu_logo} alt="menu" width='35' style={{ cursor: 'pointer' }} onClick={() => setSidebar(pre => !pre)} />
+                    <img src={menu_logo} alt="menu" width='35' style={{ cursor: 'pointer' }} onClick={handleMenu} />
                 </div>
             </div>
             <div className="nav-options">

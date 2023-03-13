@@ -20,8 +20,8 @@ code {
 :root{
   --light-background:white;
   --light-text: black;
-  --light-gray1: rgb(207, 206, 206);
-  --light-gray2:rgb(236, 236, 236);
+  --light-gray1: rgb(255, 255, 255);
+  --light-gray2:rgb(158, 19, 223);
   --theme-button-text: white;
   --theme-button-background: black;
   --sidebar-background: white;
