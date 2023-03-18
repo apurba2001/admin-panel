@@ -47,11 +47,11 @@ const Navbar = ({ setSidebar, setTheme, setFixed, sidebar }) => {
     return (
         <div className={`navbar-container ${theme ? '' : 'dark'}`}>
             <div className="icon-container">
-                <div className="logo-icon" style={{ margin: '5px' }}>
-                    <img src={logo} alt="logo-icon" width='35' style={{ cursor: 'pointer' }} />
+                <div className="logo-icon" style={{ margin: '5px 0px ' }}>
+                    <img src={logo} alt="logo-icon" width='30' style={{ cursor: 'pointer' }} />
                 </div>
-                <div className="logo-icon" style={{ margin: '5px' }} >
-                    <img src={menu_logo} alt="menu" width='35' style={{ cursor: 'pointer' }} onClick={handleMenu} />
+                <div className="logo-icon" style={{ margin: '5px 20px' }} >
+                    <img src={menu_logo} alt="menu" width='30' style={{ cursor: 'pointer' }} onClick={handleMenu} />
                 </div>
             </div>
             <div className="nav-options">
@@ -60,7 +60,7 @@ const Navbar = ({ setSidebar, setTheme, setFixed, sidebar }) => {
                 <div><button id='theme' className='nav-btn theme' onClick={() => setTheme(pre => !pre)} >{theme ? 'Dark' : 'Light'}</button></div>
                 <div className='time-container'><div>{currentDateTime.split(',')[1]}</div><div>{currentDateTime.split(',')[0]}</div> </div>
                 <div className="user-logo">
-                    <img src={user} alt='user' width='35' style={{ cursor: 'pointer' }} />
+                    <img src={user} alt='user' width='30' style={{ cursor: 'pointer' }} />
                 </div>
             </div>
         </div>

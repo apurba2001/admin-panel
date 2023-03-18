@@ -51,13 +51,13 @@ const Dashboard = () => {
             </tr>
           </tbody>
         </table>
-        <div className='weather-container'>
-          <h2>Weather</h2>
-          <p>Temperature: {weather.temperature}°C</p>
-          <p>Windspeed: {weather.windspeed} m/s</p>
-          <p>{moment(weather.time).format("MMMM Do YYYY, h:mm a")}</p>
-        </div>
-        <div style={{display: 'flex', justifyContent: "space-between", alignItems: "flex-end"}}>
+        <div className='dashboard-second-row' style={{ display: 'flex', justifyContent: "space-between", alignItems: "flex-end" }}>
+          <div className='weather-container'>
+            <h2>Weather</h2>
+            <p>Temperature: {weather.temperature}°C</p>
+            <p>Windspeed: {weather.windspeed} m/s</p>
+            <p>{moment(weather.time).format("MMMM Do YYYY, h:mm a")}</p>
+          </div>
           <PieChart />
           <AttendenceChart />
         </div>

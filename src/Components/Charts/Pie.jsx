@@ -24,7 +24,7 @@ const PieChart = () => {
     };
 
     return (
-        <div style={{ width: "300px" }}>
+        <div style={{"box-shadow":" rgba(0, 0, 0, 0.24) 0px 3px 8px", "border-radius": "10px", "padding": "10px 20px" , "height": "300px"}}>
             <Pie
                 data={chartData}
                 options={{

@@ -4,6 +4,7 @@
 .dashboard-container-2{
     width: 100%;
     padding: 20px;
+    background-color: rgb(250, 245, 255);
 }
 .dashboard-container-2.dark{
     background-color:  rgb(163, 163, 163);
@@ -26,11 +27,13 @@ th{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .weather-container{
-    border: 1px solid;
-    width: 210px;
-    text-align: center;
-    margin: 20px 0;
+    width: 300px;
+    height: 300px;
     padding: 10px;
     border-radius: 5px;
-    background-color: rgb(243, 243, 243);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.dashboard-second-row{
+    display: flex;
+    margin-top: 30px;
 }

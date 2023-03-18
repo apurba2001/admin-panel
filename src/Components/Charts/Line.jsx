@@ -6,7 +6,7 @@ import groupData from '../../data/attendence.json'
 const StudentChart = () => {
 
     return (
-        <div style={{width: "50%"}}>
+        <div style={{width: "45%",   "box-shadow":" rgba(0, 0, 0, 0.24) 0px 3px 8px", "border-radius": "10px", "padding": "10px 20px", "height": "300px"}}>
             <Bar
                 data={groupData}
                 options={{
